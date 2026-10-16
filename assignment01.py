@@ -39,6 +39,9 @@ def parse_line(line):
 
     if left == "":
         raise ValueError("the left side of the '=' sign is missing")
+    
+    if right == "":
+        raise ValueError("the right side of the '=' sign is missing")
 
     try:
         b = float(right.replace(" ", "").replace(",", "."))
